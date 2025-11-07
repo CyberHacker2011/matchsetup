@@ -24,9 +24,8 @@ export const insertLaptopSchema = createInsertSchema(laptops).omit({
 export type InsertLaptop = z.infer<typeof insertLaptopSchema>;
 export type Laptop = typeof laptops.$inferSelect;
 
-// Search criteria schema for matching - all fields optional
+// Search criteria schema for matching - all fields optional (name removed)
 export const searchLaptopSchema = z.object({
-  name: z.string().optional(),
   storage: z.string().optional(),
   ram: z.string().optional(),
   cpu: z.string().optional(),

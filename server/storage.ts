@@ -132,8 +132,7 @@ export class DatabaseStorage implements IStorage {
       return 0;
     };
 
-    // Match each field
-    totalScore += textMatch(laptop.name, criteria.name);
+    // Match each field (name removed from criteria)
     totalScore += textMatch(laptop.cpu, criteria.cpu);
     totalScore += textMatch(laptop.gpu, criteria.gpu);
     totalScore += textMatch(laptop.ram, criteria.ram);
